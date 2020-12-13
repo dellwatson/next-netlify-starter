@@ -68,23 +68,23 @@ export default function Home(props) {
 //     }, // will be passed to the page component as props
 //   }
 // }
-export const getServerSideProps = async (context) => {
-    const res = await fetch(`https://nextar.flip.id/frontend-test`)
-    const data = await res.json()
-    console.log('static props yolo')
+// export const getServerSideProps = async (context) => {
+//     const res = await fetch(`https://nextar.flip.id/frontend-test`)
+//     const data = await res.json()
+//     console.log('static props yolo')
 
-    if (!data) {
-        return {
-            redirect: {
-                destination: '/',
-                permanent: false,
-            },
-        }
-    }
+//     if (!data) {
+//         return {
+//             redirect: {
+//                 destination: '/',
+//                 permanent: false,
+//             },
+//         }
+//     }
 
-    return {
-        props: {
-            datax: data
-        }, // will be passed to the page component as props
-    }
-}
+//     return {
+//         props: {
+//             datax: data
+//         }, // will be passed to the page component as props
+//     }
+// }
